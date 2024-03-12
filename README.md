@@ -12,7 +12,7 @@ This is a very summarized `PageRank` algorithm that determines a page's importan
 
 The algorithm calculates the `PR(A)` probability that users will visit page `A`. This probability is influenced by the **damping factor**, denoted by `d`. The formula to calculate the **PageRank** index for **$\forall A$** pages:
 
-$$ \footnotesize PR(A) = \frac{1 - d}{N} + d \cdot \sum_{P \in M(A)} \frac{PR(P)}{L(P)} = \frac{1 - d}{N} + d \cdot (\frac{PR(B)}{L(B)} + \frac{PR(C)}{L(C)} + \frac{PR(D)}{L(D)} + \cdots) $$
+$$PR(A) = \frac{1 - d}{N} + d \cdot \sum_{P \in M(A)} \frac{PR(P)}{L(P)} = \frac{1 - d}{N} + d \cdot (\frac{PR(B)}{L(B)} + \frac{PR(C)}{L(C)} + \frac{PR(D)}{L(D)} + \cdots) $$
 
 This formula takes into account the importance of each page in set **M(A)**, as represented by their **PageRank** indices and the number of incoming links each of these pages has. The higher the **PageRank** indices of the linking pages and the fewer the number of incoming links, the higher the **PageRank** index of page **A** is.
 
@@ -21,19 +21,19 @@ This formula takes into account the importance of each page in set **M(A)**, as 
 The program takes **N** web resources and constructs an adjacency list graph, saving it in a file. It builds the adjacency matrix and calculates the PageRank vector.
 The algorithm takes input parameters such as the file name, damping factor d, and tolerance eps. It outputs the PageRank vector.
 
-- **$\footnotesize A(i,j) = 0$** if node **i** is not adjacent with the node **j**, otherwise **1**.
+- **$A(i,j) = 0$** if node **i** is not adjacent with the node **j**, otherwise **1**.
 - **A** web page contains at least one link to another web page. This means that matrix resulted from iterative algorithm is invertible.
-- Some pages will have a link to themselves, for easier navigation, so not all elements from main diagonal of matrix **A** are **0**. In analysis, these links are meaningless, so they will not be counted. **$\footnotesize A(i,i) = 0, \forall i \in [1, N]$**.
+- Some pages will have a link to themselves, for easier navigation, so not all elements from main diagonal of matrix **A** are **0**. In analysis, these links are meaningless, so they will not be counted. **$A(i,i) = 0, \forall i \in [1, N]$**.
 
 After reading the file, the code builds the matrix of initial links for each page, calculates the R factor, and initializes the PageRank vector with a value of `(1 / number of pages for each page)`.
 The function then enters a while loop, which calculates the PageRank vector for each page using the formula:
-$$ \footnotesize PageRank = d \cdot L_0 \cdot PR_0 + ((1 - d) ./ N)  \cdot L $$
+$$PageRank = d \cdot L_0 \cdot PR_0 + ((1 - d) ./ N)  \cdot L $$
 
-- $L$ is the matrix of initial links for each page
-- $PR_0$ is the previous value of the PageRank vector,
-- $d$ is the damping factor
-- $N$ is the number of pages
-- $L$ is a column vector with 1s.
+- **$L$** is the matrix of initial links for each page
+- **$PR_0$** is the previous value of the PageRank vector,
+- **$d$** is the damping factor
+- **$N$** is the number of pages
+- **$L$** is a column vector with 1s.
 
 The loop continues until the difference between the current and previous PageRank vectors is less than the specified tolerance eps.
 Return the computed PageRank vector for each page. The code implements the Iterative PageRank algorithm to calculate PageRank using the provided hyperlinks matrix.
