@@ -1,6 +1,6 @@
 # PageRank
 
-[PageRank](./images/Rank.png) algorithm, used by Google's search engine, assigns an index to web pages, based on importance within interconnected networks.`PageRank` analyzes inbound hyperlinks, considering both quantity and quality to predict user visits.
+[PageRank](./images/Rank.png) algorithm, used by Google's search engine, assigns an index to web pages, based on importance within interconnected networks.`PageRank` analyzes inbound hyperlinks based on quantity and quality to predict user visits.
 
 To calculate a page's index, `PageRank` evaluates inbound links from important sources. The damping factor, representing user behavior, also influences rankings. This index prioritizes authoritative pages, enhancing search experiences.
 
@@ -51,5 +51,6 @@ Based on the **Q** and **R** matrices, the function will then solve the n system
 
 In the `images` folder, you will find examples illustrating how the functions are utilized and examples showcasing `input data` and `output data` formats.
 
-**Input:** contains detailed information about web resources and their corresponding links. Each line represents a web page, followed by the indices of pages it links to. The last two lines specify the damping factor and tolerance value.
-**Output:** the PageRank vector for each page, along with the final PageRank vector, and a comprehensive list of outgoing links with their corresponding PageRank values.
+- **Input:** contains detailed information about web resources and their corresponding links. Each line represents a web page, followed by the indices of pages it links to. The last two lines specify the damping factor and tolerance value.
+
+- **Output:** the PageRank vector for each page, along with the final PageRank vector, and a comprehensive list of outgoing links with their corresponding PageRank values.
