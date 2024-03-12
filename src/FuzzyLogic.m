@@ -1,6 +1,6 @@
 % @brief Computes the belonging grade of one page according to its rank value. 
 % The result [y] is calculated such that the fuzzy member fnc.
-% This function is continuous & takes values from [0, 1] is a right. 
+% Continuous & takes values from [0, 1] is a right. 
 % Same for the values val1 & val2 takes values from [0, 1].
 %
 % @param PageRank computed page rank of one 
