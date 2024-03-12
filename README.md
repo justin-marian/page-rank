@@ -2,7 +2,7 @@
 
 [PageRank](./images/Rank.png) algorithm, used by Google's search engine, assigns an index to web pages, based on importance within interconnected networks.`PageRank` analyzes inbound hyperlinks based on quantity and quality to predict user visits.
 
-To calculate a page's index, `PageRank` evaluates inbound links from important sources. The damping factor, representing user behavior, also influences rankings. This index prioritizes authoritative pages, enhancing search experiences.
+To calculate a page's index, `PageRank` evaluates inbound links from important sources. The damping factor, representing user behavior, also influences rankings.
 
 ## Description
 
