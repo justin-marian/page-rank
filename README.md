@@ -43,9 +43,9 @@ This algorithm involves building the hyperlink matrix, calculating the stochasti
 - `Gram-Schmidt` algorithm computes the matrix inverse by solving equations separately for each line.
 - `Algebraic` algorithm calculates the PageRank vector using the hyperlinks matrix and damping factor, utilizing the Gram-Schmidt algorithm to compute the inverse.
 
-**The optimized Gram-Schmidt:** algorithm will be used to find **Q** and **R** matrices such that: ***T = Q · R***
+**The optimized Gram-Schmidt:** algorithm will be used to find **$Q$** and **$R$** matrices such that: **$T = Q · R$**
 
-Based on the **Q** and **R** matrices, the function will then solve the n systems of equations. `Algebraic` function will calculate the **PageRank** vector using the hyperlinks matrix and the damping factor, and use the `Gram-Schmidt` algorithm to compute the inverse of the matrix.
+Based on the **$Q$** and **$R$** matrices, the function will then solve the n systems of equations. `Algebraic` function will calculate the **PageRank** vector using the hyperlinks matrix and the damping factor, and use the `Gram-Schmidt` algorithm to compute the inverse of the matrix.
 
 ## Usage
 
