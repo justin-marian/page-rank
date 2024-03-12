@@ -25,7 +25,7 @@ The algorithm takes input parameters such as the file name, damping factor d, an
 
 After reading the file, the code builds the matrix of initial links for each page, calculates the R factor, and initializes the PageRank vector with a value of `(1 / number of pages for each page)`.
 The function then enters a while loop, which calculates the PageRank vector for each page using the formula:
-$$PageRank = d \cdot L_0 \cdot PR_0 + ((1 - d) ./ N)  \cdot L $$
+$$PageRank = d \cdot L_0 \cdot PR_0 + (\frac{1 - d}{N})  \cdot L $$
 
 - **$L$** is the matrix of initial links for each page
 - **$PR_0$** is the previous value of the PageRank vector,
