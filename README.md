@@ -51,6 +51,6 @@ Based on the **Q** and **R** matrices, the function will then solve the n system
 
 In the `images` folder, you will find examples illustrating how the functions are utilized and examples showcasing `input data` and `output data` formats.
 
-- **Input:** contains detailed information about web resources and their corresponding links. Each line represents a web page, followed by the indices of pages it links to. The last two lines specify the damping factor and tolerance value.
+- **Input:** contains detailed information about web resources and their corresponding links. Each line represents a web page, followed by the indices of pages it links to and two lines specify the damping factor and tolerance value.
 
 - **Output:** the PageRank vector for each page, along with the final PageRank vector, and a comprehensive list of outgoing links with their corresponding PageRank values.
